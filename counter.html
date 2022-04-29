@@ -15,9 +15,7 @@
       <div>
         <h1 style="color: darkslategray;">Counter: {{ counter }}</h1>
       </div>
-      <div v-if="counter >= maximum">
-        <h1 style="color: red;">Max qty exceeded: {{ maximum }}</h1>
-      </div>
+
       <div class="button">
         <button v-bind:="Add" @click="counterAdd">Add</button>
         <button v-bind:="Reset" @click="counterReset">Reset</button>

@@ -16,14 +16,20 @@ const App = {
         }
     },
     methods: {
-        counterAdd(){
-            this.counter += this.step;
+        counterAdd() {
+            if (this.counter < this.maximum){
+                this.counter++;
+            }
         },
-        counterReset(){
+        counterReset() {
             this.counter = 0;
         },
-        counterRemove(){
-            this.counter -= this.step;
+        counterRemove() {
+            if(this.counter == 0){
+                this.counter = this.counter;
+            } else {
+                this.counter--;
+            }
         }
     }
 }
