@@ -7,24 +7,33 @@
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Counter</title>
+    <link rel="stylesheet" href="styles/style.css">
   </head>
 
   <body>
     <div id="app">
-
       <div>
         <h1 style="color: darkslategray;">Counter: {{ counter }}</h1>
       </div>
       <div v-if="counter >= maximum">
         <h1 style="color: red;">Max qty exceeded: {{ maximum }}</h1>
       </div>
-
       <div class="button">
-        <button @click="counter++">Add</button>
-        <button @click="counter = 0">Reset</button>
-        <button @click="counter--">Remove</button>
+        <button v-bind:="Add" @click="counterAdd">Add</button>
+        <button v-bind:="Reset" @click="counterReset">Reset</button>
+        <button v-bind:="Remove" @click="counterRemove">Remove</button>
       </div>
+    </div>
 
+    <br />
+    <hr>
+    <br />
+
+    <div id="app2">
+      <div>
+        <h1 :style="{ color }" @click="changeColor">{{ header }}</h1>
+        <button @click="Reverse">Reverse</button>
+      </div>
     </div>
  
     <script src="https://unpkg.com/vue@3"></script>

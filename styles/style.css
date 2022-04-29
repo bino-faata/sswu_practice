@@ -1,0 +1,25 @@
+* {
+    font-family: monospace;
+}
+#bind_id {
+    background-color: coral;
+    font-size: 28px;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+.bind_class {
+    text-align: center;
+}
+
+.add {
+    background-color: cadetblue;
+    color: aliceblue;
+}
+.remove {
+    background-color: crimson;
+    color: aliceblue;
+}
+.reset {
+    background-color: gold;
+}
