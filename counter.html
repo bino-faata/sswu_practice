@@ -6,20 +6,23 @@
     <!-- Always force latest IE rendering engine or request Chrome Frame -->
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Welcome to XAMPP</title>
+    <title>Counter</title>
   </head>
 
-  <body class="index">
-    <div class="container" id="app">
+  <body>
+    <div id="app">
 
-      <div class="counter">
+      <div>
         <h1 style="color: darkslategray;">Counter: {{ counter }}</h1>
+      </div>
+      <div v-if="counter >= maximum">
+        <h1 style="color: red;">Max qty exceeded: {{ maximum }}</h1>
       </div>
 
       <div class="button">
-        <button class="primary" @click="counter++">Add</button>
-        <button class="primary" @click="counter = 0">Reset</button>
-        <button class="primary" @click="counter--">Remove</button>
+        <button @click="counter++">Add</button>
+        <button @click="counter = 0">Reset</button>
+        <button @click="counter--">Remove</button>
       </div>
 
     </div>
