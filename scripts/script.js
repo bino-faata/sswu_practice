@@ -1,7 +1,6 @@
 const App = {
     data() {
         return {
-            step: 1,
             counter: 0,
             maximum: 3,
             Add: {
@@ -25,9 +24,7 @@ const App = {
             this.counter = 0;
         },
         counterRemove() {
-            if(this.counter == 0){
-                this.counter = this.counter;
-            } else {
+            if(this.counter != 0){
                 this.counter--;
             }
         }
