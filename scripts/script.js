@@ -18,6 +18,7 @@ const App = {
         counterAdd() {
             if (this.counter < this.maximum){
                 this.counter++;
+                document.querySelector("#message").innerHTML = "";
             }
         },
         counterReset() {
@@ -26,6 +27,8 @@ const App = {
         counterRemove() {
             if(this.counter != 0){
                 this.counter--;
+            } else {
+                document.querySelector("#message").innerHTML = "Counter should be 0 or greater!";
             }
         }
     }
