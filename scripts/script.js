@@ -23,6 +23,9 @@ const App = {
         },
         counterReset() {
             this.counter = 0;
+            if(document.querySelector("#message").innerHTML.length > 0) {
+                document.querySelector("#message").innerHTML = "";
+            }
         },
         counterRemove() {
             if(this.counter != 0){
