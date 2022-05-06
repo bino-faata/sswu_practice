@@ -12,7 +12,7 @@ const App = {
             Reset: {
                 class: "reset"
             }
-        }
+        };
     },
     methods: {
         counterAdd() {
@@ -35,14 +35,14 @@ const App = {
             }
         }
     }
-}
+};
 
 const App2 = {
     data() {
         return {
             header: "Hello Sigma Students!",
             color: "black"
-        }
+        };
     },
     methods: {
         Reverse() {
@@ -52,7 +52,7 @@ const App2 = {
             this.color = this.color === "black" ? "cadetblue" : "black";
         }
     }
-}
+};
 
 Vue.createApp(App).mount("#app");
 Vue.createApp(App2).mount("#app2");
